@@ -33,7 +33,8 @@
                 android:textSize="30dp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="191dp" />
+                tools:layout_editor_absoluteY="191dp"
+                tools:ignore="MissingConstraints" />
 
             <EditText
                 android:id="@+id/curso_input"
@@ -50,7 +51,8 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="274dp" />
+                tools:layout_editor_absoluteY="274dp"
+                tools:ignore="MissingConstraints" />
 
 
             <EditText
@@ -68,7 +70,8 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="339dp" />
+                tools:layout_editor_absoluteY="339dp"
+                tools:ignore="MissingConstraints" />
 
             <EditText
                 android:id="@+id/numero_matricula_gerar_input"
@@ -89,7 +92,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="412dp" />
+                tools:layout_editor_absoluteY="412dp"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/gerar_referencia_input"
@@ -105,7 +109,8 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="497dp" />
+                tools:layout_editor_absoluteY="497dp"
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/gerar_referencia_aba_input"

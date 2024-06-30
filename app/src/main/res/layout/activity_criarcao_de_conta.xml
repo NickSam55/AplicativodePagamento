@@ -13,146 +13,148 @@
         android:layout_height="match_parent"
         android:background="#70000000"
         />
-    <ScrollView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo"
+        android:text="Criar conta"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="189dp"
+        tools:ignore="MissingConstraints" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/archivo"
-                android:text="Criar conta"
-                android:textColor="@color/white"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="108dp"
-                tools:layout_editor_absoluteY="189dp" />
-
-            <EditText
-                android:id="@+id/nome_input"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input_quadrado"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
-                android:paddingTop="13dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="13dp"
-                android:text="Nome completo"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="274dp" />
+    <EditText
+        android:id="@+id/nome_input"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_quadrado"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Nome completo"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="274dp"
+        tools:ignore="MissingConstraints" />
 
 
-            <EditText
-                android:id="@+id/password_input"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/input_quadrado"
-                android:hint="Palavra-passe"
-                android:inputType="textPassword"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="13dp"
-                android:paddingBottom="13dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="348dp" />
-
-            <EditText
-                android:id="@+id/email_input"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input_quadrado"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:paddingLeft="20dp"
-                android:paddingTop="13dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="13dp"
-                android:text="Email"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="418dp" />
-
-            <EditText
-                android:id="@+id/numero_matricula_input"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/input_quadrado"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
-                android:paddingTop="13dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="13dp"
-                android:text="Número de matricula"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="489dp" />
-
-            <TextView
-                android:id="@+id/ja_tem_conta_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Já tem uma conta?"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="120dp"
-                tools:layout_editor_absoluteY="653dp" />
-
-            <Button
-                android:id="@+id/continuar_input"
-                android:layout_width="343dp"
-                android:layout_height="51dp"
-                android:background="@drawable/input_quadrado"
-                android:fontFamily="@font/archivo"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
-                android:backgroundTint="@color/white"
-                android:text="Continuar"
-                android:textColor="#4B9BE3"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="586dp" />
-
-            <ImageView
-                android:id="@+id/Criar_conta_input"
-                android:layout_width="159dp"
-                android:layout_height="115dp"
-                android:background="#00000000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/criar_conta"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="54dp" />
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_quadrado"
+        android:hint="Palavra-passe"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="344dp" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/numero_matricula_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_quadrado"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Número de matricula"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="481dp" />
 
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_quadrado"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="417dp" />
 
-    </ScrollView>
+    <TextView
+        android:id="@+id/ja_tem_conta_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Já tem uma conta?"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="653dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/continuar_input"
+        android:layout_width="343dp"
+        android:layout_height="51dp"
+        android:background="@drawable/input_quadrado"
+        android:fontFamily="@font/archivo"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:backgroundTint="@color/white"
+        android:text="Continuar"
+        android:textColor="#4B9BE3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="586dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/Criar_conta_input"
+        android:layout_width="159dp"
+        android:layout_height="115dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/criar_conta"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="54dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

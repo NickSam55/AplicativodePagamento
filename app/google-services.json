@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "54289046052",
+    "project_id": "aplicativo-de-pagamento",
+    "storage_bucket": "aplicativo-de-pagamento.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54289046052:android:be49e1c3e7a3195fde96b1",
+        "android_client_info": {
+          "package_name": "com.example.aplicativodepagamento"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8NI-0C6VJfr0wNKyzCTRA1SnwEZL48eM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

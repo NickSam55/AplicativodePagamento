@@ -13,123 +13,112 @@
         android:layout_height="match_parent"
         android:background="#70000000"
         />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="188dp"
+        tools:ignore="MissingConstraints" />
 
+    <EditText
+        android:id="@+id/numerotelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_quadrado"
+        android:ems="10"
+        android:inputType="phone"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Número de telefone"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="307dp"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/archivo"
-                android:text="Login"
-                android:textColor="@color/white"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="156dp"
-                tools:layout_editor_absoluteY="188dp" />
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/input_quadrado"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="13dp"
+        android:text="Palavra-passe"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="385dp"
+        tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/numerotelefone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/input_quadrado"
-                android:ems="10"
-                android:inputType="phone"
-                android:paddingLeft="20dp"
-                android:paddingTop="13dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="13dp"
-                android:text="Número de telefone"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="307dp" />
+    <TextView
+        android:id="@+id/Esqueceu_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu a palavra-passe?"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="529dp"
+        tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/password_input"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/input_quadrado"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingLeft="20dp"
-                android:paddingTop="13dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="13dp"
-                android:text="Palavra-passe"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="385dp" />
+    <Button
+        android:id="@+id/login_input"
+        android:layout_width="343dp"
+        android:layout_height="51dp"
+        android:background="@drawable/input_quadrado"
+        android:fontFamily="@font/archivo"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Entrar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="460dp"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/Esqueceu_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Esqueceu a palavra-passe?"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="84dp"
-                tools:layout_editor_absoluteY="529dp" />
+    <TextView
+        android:id="@+id/criar_conta_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/criar_conta"
+        android:text="Criar conta"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="593dp"
+        tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/login_input"
-                android:layout_width="343dp"
-                android:layout_height="51dp"
-                android:background="@drawable/input_quadrado"
-                android:fontFamily="@font/archivo"
-                android:paddingLeft="6dp"
-                android:paddingRight="6dp"
-                android:text="Entrar"
-                android:textColor="@color/white"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="460dp" />
-
-            <TextView
-                android:id="@+id/criar_conta_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableRight="@drawable/criar_conta"
-                android:text="Criar conta"
-                android:textColor="@color/white"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="144dp"
-                tools:layout_editor_absoluteY="593dp" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="159dp"
-                android:layout_height="115dp"
-                android:background="#00000000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/login_conta"
-                tools:layout_editor_absoluteY="54dp"
-                tools:ignore="MissingConstraints" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>
-
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="159dp"
+        android:layout_height="115dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_conta"
+        tools:layout_editor_absoluteY="54dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
