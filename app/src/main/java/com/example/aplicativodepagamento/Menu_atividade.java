@@ -1,6 +1,8 @@
 package com.example.aplicativodepagamento;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +12,23 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Menu_atividade extends AppCompatActivity {
 
+    TextView opcao_pagamento = findViewById(R.id.opcao_pagamento);
+    TextView opcao_informacoes = findViewById(R.id.opcao_informacoes);
+    TextView opcao_historico = findViewById(R.id.opcao_historico);
+    TextView opcao_configuracoes = findViewById(R.id.opcao_configuracoes);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_menu_atividade);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        opcao_pagamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
         });
+
     }
 }

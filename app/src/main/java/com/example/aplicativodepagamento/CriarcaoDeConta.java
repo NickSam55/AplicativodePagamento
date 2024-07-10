@@ -22,7 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class CriarConta extends AppCompatActivity {
+public class CriarcaoDeConta extends AppCompatActivity {
 
     //@SuppressLint("MissingInflatedId")
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://aplicativo-de-pagamento-default-rtdb.firebaseio.com/");
@@ -31,7 +31,7 @@ public class CriarConta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_criar_conta);
+        setContentView(R.layout.activity_criarcao_de_conta);
         final TextView ja_tem_conta_password = findViewById(R.id.ja_tem_conta_password);
         final EditText nome_input = findViewById(R.id.nome_input);
         final EditText password_input = findViewById(R.id.password_input);
@@ -49,10 +49,10 @@ public class CriarConta extends AppCompatActivity {
                 final String numero_matricula = numero_matricula_input.getText().toString();
 
                 if (nome.isEmpty() || password.isEmpty() || numero.isEmpty() || numero_matricula.isEmpty()) {
-                    Toast.makeText(CriarConta.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CriarcaoDeConta.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 }
                 else if(password.length() < 8){
-                    Toast.makeText(CriarConta.this, "Palavra-passe deve ter no mínimo 8 caracteres", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CriarcaoDeConta.this, "Palavra-passe deve ter no mínimo 8 caracteres", Toast.LENGTH_SHORT).show();
 
                 }
                 else {
@@ -60,7 +60,7 @@ public class CriarConta extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.hasChild(numero)){
-                                Toast.makeText(CriarConta.this, "Número de telefone já existe", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CriarcaoDeConta.this, "Número de telefone já existe", Toast.LENGTH_SHORT).show();
                             }
                             else {
                                 databaseReference.child("usuarios").child(numero).child("nome completo").setValue(nome);
@@ -68,8 +68,8 @@ public class CriarConta extends AppCompatActivity {
                                 databaseReference.child("usuarios").child(numero).child("numero").setValue(numero);
                                 databaseReference.child("usuarios").child(numero).child("numero de matricula").setValue(numero_matricula);
 
-                                Toast.makeText(CriarConta.this, "Conta criada com sucesso", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(CriarConta.this, Menu_atividade.class));
+                                Toast.makeText(CriarcaoDeConta.this, "Conta criada com sucesso", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(CriarcaoDeConta.this, Menu_atividade.class));
 
                             }
 
@@ -88,14 +88,14 @@ public class CriarConta extends AppCompatActivity {
         continuar_input.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(CriarcaoDeConta.this, Menu_atividade.class));
             }
         });
 
         ja_tem_conta_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CriarConta.this, ActividadePrincipal.class));
+                startActivity(new Intent(CriarcaoDeConta.this, ActividadePrincipal.class));
             }
         });
 

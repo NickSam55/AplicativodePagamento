@@ -1,5 +1,6 @@
 package com.example.aplicativodepagamento;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,26 +9,23 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class ActividadePrincipal extends AppCompatActivity {
-
+public class actividade_principal extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.actividade_principal);
 
-        final TextView criar_conta_input = findViewById(R.id.criar_conta_input);
-        final Button login_input = findViewById(R.id.login_input);
-        final EditText numerotelefone = findViewById(R.id.numerotelefone);
-        final EditText password_input = findViewById(R.id.password_input);
+        final EditText numero_de_telefone = (EditText) findViewById(R.id.numero_de_telefone);
+        final EditText password_input = (EditText) findViewById(R.id.palavra_passe_input);
+        final Button botao_login_input = (Button) findViewById(R.id.botao_login_input);
+        final TextView conta_nova_input = (TextView) findViewById(R.id.conta_nova_input);
 
 
-        login_input.setOnClickListener(new View.OnClickListener() {
+        botao_login_input.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String numero = numerotelefone.getText().toString();
+                final String numero = numero_de_telefone.getText().toString();
                 final String password = password_input.getText().toString();
 
                 if (numero.isEmpty() || password.isEmpty()) {
@@ -38,13 +36,12 @@ public class ActividadePrincipal extends AppCompatActivity {
                 }
             }
         });
-        criar_conta_input.setOnClickListener(new View.OnClickListener() {
+        conta_nova_input.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActividadePrincipal.this, CriarcaoDeConta.class));
+                startActivity(new Intent(actividade_principal.this, CriarConta.class));
             }
         });
 
     }
-
 }

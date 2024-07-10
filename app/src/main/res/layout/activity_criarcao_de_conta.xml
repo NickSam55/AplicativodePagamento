@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CriarConta"
+    tools:context=".CriarcaoDeConta"
+    android:orientation="vertical"
+    android:gravity=""
     android:background="@drawable/imetro">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#70000000"
-        />
+    <ImageView
+        android:id="@+id/Criar_conta_input"
+        android:layout_width="159dp"
+        android:layout_height="115dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/criar_conta"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="54dp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fontFamily="@font/archivo"
         android:text="Criar conta"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="189dp"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/nome_input"
-        android:layout_width="363dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_quadrado"
         android:ems="10"
         android:inputType="textPersonName"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
         android:paddingLeft="20dp"
         android:paddingTop="13dp"
         android:paddingRight="20dp"
         android:paddingBottom="13dp"
-        android:text="Nome completo"
-        android:textColor="@color/white"
+        android:hint="Nome completo"
+        android:textColorHint="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,33 +59,37 @@
 
     <EditText
         android:id="@+id/password_input"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_quadrado"
-        android:hint="Palavra-passe"
+        android:ems="10"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="13dp"
         android:paddingRight="20dp"
         android:paddingBottom="13dp"
-        android:textColor="@color/white"
+        android:hint="Palavra-passe"
         android:textColorHint="@color/white"
-        android:textSize="20sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="344dp" />
+        tools:layout_editor_absoluteY="481dp" />
 
 
     <EditText
         android:id="@+id/numero_matricula_input"
-        android:layout_width="0dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_gravity="center"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/input_quadrado"
         android:ems="10"
         android:inputType="textPersonName"
@@ -86,8 +97,8 @@
         android:paddingTop="13dp"
         android:paddingRight="20dp"
         android:paddingBottom="13dp"
-        android:text="Número de matricula"
-        android:textColor="@color/white"
+        android:hint="Número de matricula"
+        android:textColorHint="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -96,10 +107,12 @@
         tools:layout_editor_absoluteY="481dp" />
 
     <EditText
-        android:id="@+id/email_input"
-        android:layout_width="0dp"
+        android:id="@+id/numero_input"
+        android:layout_width="380dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_quadrado"
         android:ems="10"
@@ -108,8 +121,8 @@
         android:paddingTop="13dp"
         android:paddingRight="20dp"
         android:paddingBottom="13dp"
-        android:text="Email"
-        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Número de telefone"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -117,44 +130,38 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="417dp" />
 
-    <TextView
-        android:id="@+id/ja_tem_conta_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Já tem uma conta?"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="653dp"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/continuar_input"
         android:layout_width="343dp"
         android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
         android:background="@drawable/input_quadrado"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/archivo"
         android:paddingLeft="6dp"
         android:paddingRight="6dp"
-        android:backgroundTint="@color/white"
         android:text="Continuar"
-        android:textColor="#4B9BE3"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="586dp"
+        tools:layout_editor_absoluteY="586dp" />
+
+    <TextView
+        android:id="@+id/ja_tem_conta_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Já tem uma conta?"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="653dp"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/Criar_conta_input"
-        android:layout_width="159dp"
-        android:layout_height="115dp"
-        android:background="#00000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/criar_conta"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="54dp" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

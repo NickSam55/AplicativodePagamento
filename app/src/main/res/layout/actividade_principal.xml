@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imetro"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    tools:context=".ActividadePrincipal">
+    tools:context=".actividade_principal">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="159dp"
-        android:layout_height="115dp"
-        android:background="#00000000"
-        android:layout_marginTop="-130dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/login_conta"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="54dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -33,20 +23,19 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="188dp" />
+        tools:layout_editor_absoluteY="188dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/numerotelefone"
-        android:layout_width="400dp"
+        android:id="@+id/numero_de_telefone"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/input_quadrado"
         android:ems="10"
         android:inputType="phone"
-        android:layout_marginTop="40dp"
         android:paddingLeft="20dp"
         android:paddingTop="13dp"
         android:paddingRight="20dp"
@@ -61,12 +50,11 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/password_input"
-        android:layout_width="400dp"
+        android:id="@+id/palavra_passe_input"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="18dp"
         android:background="@drawable/input_quadrado"
         android:ems="10"
         android:hint="Palavra-passe"
@@ -88,7 +76,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Esqueceu a palavra-passe?"
-        android:layout_marginBottom="10dp"
         android:textColor="@color/white"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="84dp"
@@ -96,7 +83,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/login_input"
+        android:id="@+id/botao_login_input"
         android:layout_width="343dp"
         android:layout_height="51dp"
         android:background="@drawable/input_quadrado"
@@ -107,22 +94,32 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="460dp" />
+        tools:layout_editor_absoluteY="460dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/criar_conta_input"
+        android:id="@+id/conta_nova_input"
         android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:drawableRight="@drawable/criar_conta"
         android:text="Criar conta"
         android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="593dp" />
+        tools:layout_editor_absoluteY="593dp"
+        tools:ignore="MissingConstraints" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="159dp"
+        android:layout_height="115dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_conta"
+        tools:layout_editor_absoluteY="54dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

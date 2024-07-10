@@ -48,12 +48,13 @@
                 android:layout_gravity="center_horizontal">
             </ImageView>
             <TextView
+                android:id="@+id/opcao_pagamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pagamento"
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/black">
             </TextView>
         </LinearLayout>
@@ -80,12 +81,13 @@
                     android:layout_gravity="center_horizontal">
                 </ImageView>
                 <TextView
+                    android:id="@+id/opcao_informacoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Informações do aluno"
                     android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:gravity="center"
                     android:textColor="@color/black">
                 </TextView>
@@ -113,6 +115,7 @@
                     android:layout_gravity="center_horizontal">
                 </ImageView>
                 <TextView
+                    android:id="@+id/opcao_configuracoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Configurações"
@@ -145,6 +148,7 @@
                     android:layout_gravity="center_horizontal">
                 </ImageView>
                 <TextView
+                    android:id="@+id/opcao_historico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Histórico de atividade"
@@ -162,7 +166,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MENU"
+        android:text="Menu de atividades"
         android:textSize="34sp"
         android:textColor="@color/white"
         android:textStyle="bold"
