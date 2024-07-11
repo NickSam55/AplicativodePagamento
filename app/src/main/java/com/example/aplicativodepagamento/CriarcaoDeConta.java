@@ -85,13 +85,6 @@ public class CriarcaoDeConta extends AppCompatActivity {
             }
         });
 
-        continuar_input.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CriarcaoDeConta.this, Menu_atividade.class));
-            }
-        });
-
         ja_tem_conta_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
