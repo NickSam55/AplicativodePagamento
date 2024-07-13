@@ -34,6 +34,7 @@ public class ActividadePrincipal extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    startActivity(new Intent(ActividadePrincipal.this, Menu_atividade.class));
 
                 }
             }
